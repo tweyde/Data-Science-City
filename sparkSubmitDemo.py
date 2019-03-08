@@ -22,12 +22,8 @@ if __name__ == '__main__':
     stopWords = freqWords.filter(lambda x:  x[0] in swlist)
 
     output = stopWords.collect()
-    f = open("outfile.txt", "w")
-    f.write("Now the file has one more line!")
     for (word, count) in output:
-        print("%s: %i" % (word, count)) # write to the console
-        f.write("%s: %i" % (word, count)) # and into a file
-    f.close()
+        print("%s: %i" % (word, count)) # write output to the console
 
 
     # 3) shut down the SparkContext
