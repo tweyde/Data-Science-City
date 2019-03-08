@@ -27,7 +27,7 @@ if __name__ == '__main__':
     for (word, count) in output:
         print("%s: %i" % (word, count)) # write to the console
         f.write("%s: %i" % (word, count)) # and into a file
-    file.close()
+    f.close()
 
 
     # 3) shut down the SparkContext
